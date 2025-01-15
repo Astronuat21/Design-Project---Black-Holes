@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Black Holes: And How do they work?</title>
+        <link rel="stylesheet" href="styles_default.css">
+        <link rel="stylesheet" href="styles2.css">
+    </head>
+    <body>
+        <!---->
+        <img src="./ImagesAndGIFs/BlackHole2-ezgif.com-speed.gif" class="TitleCardImage"alt="POV: ur computer cant display a GIF :/">
+        <h1>
+            BLACK HOLES
+        </h1>
+        <h4>
+            And how can they change?
+        </h4>
+        <p class="textblock">
+            While black holes can be pretty complicated, they really only differ in their size and their rotation speed.
+           </p>
+            <p class="textblock">
+                Play around with Mass and Spin here!
+            </p>
+
+            <label for="sliderMass"></label>
+            <input type="range" id="sliderMass" min="1" max="3" style="position: relative; right: 100px; bottom: 100px;">
+            <label for="sliderSpin"></label>
+            <input type="range" id="sliderSpin" min="-10" max="-1">
+
+            <img src="ImagesAndGIFs/spin spin spin black hole.gif" class="MassChanger">
+        <div class="SpinChanger"></div>
+            <div>
+                <a href="index.html" class="ButtonPage1">Home Page</a><br> 
+                <a href="index3.html" class="ButtonPage3">Messing with Physics</a><br>
+                <a href="about.html" target="_blank" class="ButtonPage4">About Us</a><br>
+                <a href="index4.html" target="_blank" class="ButtonPage5">Sources</a>
+                <a href="index2.html" class="ButtonPage2">Black Holes: A Summary</a><br>
+            </div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
+    <script>
+        var slider1 = document.getElementById("sliderMass");            // Gets CSS element
+        const root = document.documentElement;                          // Root Constant
+        slider1.addEventListener("input", (event) => {                  // Checks for a change in the slider
+            root.style.setProperty("--mass", event.target.value ); // Sets the root property to the slider val
+        } );
+        var slider2 = document.getElementById("sliderSpin");
+        slider2.addEventListener("input", (event) => {
+            root.style.setProperty("--spin", -event.target.value + "s"); // + "s" adds the character so the variable is identitifed as time.
+        } );
+        </script>

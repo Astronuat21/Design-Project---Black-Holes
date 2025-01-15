@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <title>Into The Wormholes</title>
+        <link rel="stylesheet" href="styles_default.css">
+        <link rel="stylesheet" href="styles4.css">
+  </head>
+  <body>
+        <p class="titleblock" id="Titlecard">Send a Message through the Wormhole!</p>
+        <p class="textblock" id="Titlecard2">If you'd like to send us an epic message, fill out the information below and we'll hope the information isn't deleted on the way!</p>
+        <img src="ImagesAndGIFs/blackhole3.gif" alt="BLACK HOLE!!!" id="msg_etr">
+        <form><!--FORM!! HERES YOUR SILLY FORM FOR THE DESIGN SPECIFICATIONS GAAAAAAAAA-->
+            <br><br>
+            <label for="email"><p class="textblock" id="Message">Email:</p></label>
+            <br>
+            <input type="email" id="Message3">
+            <br>
+            <label for="message"><p class="textblock" id="Message2">Message:</p></label>
+            <br>
+            <input type="text" id="Message4">
+            <br>
+            <button id="YeetMessageInHole" onclick="DoAnimation();" class="button" type="button">Send It in!</button>
+        </form>
+      <!--Note to self: dont make word by word animations ever.-->
+        <p><b> 
+          <p id="NoMSG1" class="InvisibleForNow">Uh </p>
+          <p id="NoMSG2" class="InvisibleForNow">Oh, </p>
+          <p id="NoMSG3" class="InvisibleForNow">It </p>
+          <p id="NoMSG4" class="InvisibleForNow">seems </p>
+          <p id="NoMSG5" class="InvisibleForNow">that </p>
+          <p id="NoMSG6" class="InvisibleForNow">your </p>
+          <br>
+          <p id="NoMSG7" class="InvisibleForNow">message </p>
+          <p id="NoMSG8" class="InvisibleForNow">didn't </p>
+          <p id="NoMSG9" class="InvisibleForNow">make </p>
+          <p id="NoMSG0" class="InvisibleForNow">it :/</p>
+        </b></p>
+  </body>
+  <script>
+    function DoAnimation() {
+      // start Black hole consuming animation
+      var targetElement = document.getElementById("Message");
+      targetElement.className = "animate";
+      var targetElement2 = document.getElementById("msg_etr");
+      targetElement2.className = "animate2";
+      var targetElement = document.getElementById("Message2");
+      targetElement.className = "animate3";
+      var targetElement = document.getElementById("Message3");
+      targetElement.className = "animate";
+      var targetElement = document.getElementById("Message4");
+      targetElement.className = "animate3";
+      var targetElement = document.getElementById("Titlecard");
+      targetElement.className = "animtitle1";
+      var targetElement = document.getElementById("Titlecard2");
+      targetElement.className = "animtitle2";
+      var targetElement = document.getElementById("YeetMessageInHole");
+      targetElement.className = "i_cant_think_of_more_titles_bruh_im_tired";
+      // the text animation (WHY DOES IT TAKE AS MUCH SPACE AS EVERYTHING ELSE COMBINED)
+      var targetElement = document.getElementById("NoMSG1");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG2");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG3");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG4");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG5");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG6");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG7");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG8");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG9");
+      targetElement.className = "InvisibleNoMore";
+      var targetElement = document.getElementById("NoMSG0");
+      targetElement.className = "InvisibleNoMore";
+    }
+  </script>
+</html>

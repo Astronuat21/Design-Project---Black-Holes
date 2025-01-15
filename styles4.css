@@ -1,0 +1,182 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/*frog*/
+}
+/* Comments are not repeated between CSS stylesheets. see styles.css for more general information, and specific files for page-specific info.*/
+body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+.titleblock {
+    font-size: 40px;
+    position: relative;
+    font-weight: bold;
+    display: inline;
+}
+img {
+    opacity: 0%;
+}
+.textblock {
+    font-size: 24px;
+    position: relative;
+}
+button {
+    width: 100px;
+    aspect-ratio: 3 / 1;
+    background-color: black;
+}
+/* Everything below is animation based. The animations are triggered when the respective class is added to the objects. */
+.animate {
+    font-size: 24px;
+    animation-name: ConsumedMessage;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+.animate3 {
+    font-size: 24px;
+    animation-name: ConsumedMessage2;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    position: relative;
+}
+.animate2 {
+    animation-name: ConsumerOfTheMessages;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+    position: relative;
+    left: calc(100% - 200px);
+    top: 200px;
+}
+input, label {
+    background-color: black;
+    animation-delay: 400ms;
+}
+.animtitle1 {
+    position: relative;
+    animation-name: ConsumedTitleCard;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-timing-function: cubic-bezier(1, 0.24, 0.95, 1.76);
+    animation-fill-mode: forwards;
+    font-size: 40px;
+    font-weight: bold;
+}
+.animtitle2 {
+    position: relative;
+    animation-name: ConsumedTitleCard;
+    animation-duration: 2s;
+    animation-delay: 100ms;
+    animation-timing-function: cubic-bezier(1, 0.24, 0.95, 1.76);
+    animation-fill-mode: forwards;
+    font-size: 24px;
+}
+.i_cant_think_of_more_titles_bruh_im_tired {
+    position: relative;
+    width: 100px;
+    height: 33.3333px;
+    background-color: black;
+    animation-name: ConsumedButton;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 700ms;
+    animation-timing-function: cubic-bezier(0.51,-0.04, 1, 4.39);
+}
+/* Mostly Copy pasted animations. */
+@keyframes ConsumedButton {
+    from {left: 0; top: 0px; font-size: auto; width: 100px; height: 33px;}
+    to {left: 100%; top: -50px; font-size: 10px;}
+    35% {opacity: 100%; width: 300px; height: 20px;}
+    40%,100% {opacity: 0%;}
+}
+@keyframes ConsumedMessage {
+    from {left: 0; top: 0px; font-size: 24px;}
+    to {left: 100%; top: 40px; font-size: 10px;}
+    58% {opacity: 100%;}
+    60%,100% {opacity: 0%;}
+}
+@keyframes ConsumedMessage2 {
+    from {left: 0; top: 0px; font-size: 24px;}
+    to {left: 100%; top: -30px; font-size: 10px;}
+    58% {opacity: 100%;}
+    60%,100% {opacity: 0%;}
+}
+@keyframes ConsumedMessage3 {
+    from {left: 0; top: 0px;}
+    to {left: 100%; top: 40px;}
+    58% {opacity: 100%;}
+    60%,100% {opacity: 0%;}
+}
+@keyframes ConsumedMessage4 {
+    from {left: 0; top: 0px;}
+    to {left: 100%; top: 40px;}
+    58% {opacity: 100%;}
+    60%,100% {opacity: 0%;}
+}
+@keyframes ConsumerOfTheMessages {
+    0% {opacity: 0%;}
+    15% {opacity: 100%;}
+    70% {opacity: 0%;}
+    100% {opacity: 0%;}
+}
+@keyframes ConsumedTitleCard {
+    0% {left: 0; top: 0; transform: rotate(0deg);}
+    80% {opacity: 100%;}
+    89% {opacity: 0%;}
+    100% {left: 700px; top: 320px; transform: rotate(90deg); opacity: 0;}
+}
+/* Fun fact; Word By Word animations are stupidly inneficient. */
+#NoMSG1,#NoMSG2,#NoMSG3,#NoMSG4,#NoMSG5,#NoMSG6,#NoMSG7,#NoMSG8,#NoMSG9,#NoMSG0 {
+    font-size: 70px;
+    display: inline;
+    position: relative;
+    vertical-align: center;
+    bottom: 30%;
+}
+#NoMSG1, #NoMSG7 {
+    padding-left: 20%;
+}
+.InvisibleForNow {
+    opacity: 0;
+}
+.InvisibleNoMore {
+    animation-name: MessageWasEaten;
+    animation-duration: 300ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes MessageWasEaten {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
+}
+#NoMSG1 {
+    animation-delay: 3s;
+}
+#NoMSG2 {
+    animation-delay: 3.2s;
+}
+#NoMSG3 {
+    animation-delay: 4s;
+}
+#NoMSG4 {
+    animation-delay: 4.2s;
+}
+#NoMSG5 {
+    animation-delay: 4.4s;
+}
+#NoMSG6 {
+    animation-delay: 4.6s;
+}
+#NoMSG7 {
+    animation-delay: 4.8s;
+}
+#NoMSG8 {
+    animation-delay: 5.3s;
+}
+#NoMSG9 {
+    animation-delay: 5.6s;
+}
+#NoMSG0 {
+    animation-delay: 6s;
+}

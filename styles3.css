@@ -1,0 +1,75 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/*frog*/
+}
+body {
+    overflow-x: hidden;
+}
+/* Comments are not repeated between CSS stylesheets. see styles.css for more general information, and specific files for specific pages.*/
+.titleblock {
+    font-size: 40px;
+    position: relative;
+    font-weight: bold;
+}
+.textblock {
+    font-size: 24px;
+    position: relative;
+}
+button p a {
+    text-decoration: none;
+}
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 500px;
+}
+div {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+:root {
+    --animtime: 20s
+}
+iframe {
+    aspect-ratio: 2 / 1;
+    /* animation part VVV */
+    position: absolute;
+    left: max(calc(480px * 6), 100%);
+    animation-name: itemwheel;
+    animation-duration: var(--animtime);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    height: 240px;
+}
+.BackToHome {
+    position: relative;
+    top: 420px;
+}
+@keyframes itemwheel {
+    to {left: -480px}
+} /* 6 is the amt of items in the caroussel *//*480px is width of the item */
+.iframe1 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 1) * -1);
+}
+  
+.iframe2 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 2) * -1);
+}
+  
+.iframe3 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 3) * -1);
+}
+  
+.iframe4 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 4) * -1);
+}
+  
+.iframe5 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 5) * -1);
+}
+  
+.iframe6 {
+    animation-delay: calc(var(--animtime) / 6 * (6 - 6) * -1);
+}

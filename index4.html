@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Black Holes: Sources</title>
+        <link rel="stylesheet" href="styles_default.css">
+        <link rel="stylesheet" href="styles3.css">
+    </head>
+    <body>
+        <p class="titleblock">Our Sources!</p>
+        <p class="textblock">Whether you'd like to see where we got this information, or just curious to learn more; 
+            here are some amazing videos you can watch.
+        </p>
+        <br>
+        <div>
+            <!--Links for the video carousel-->
+            <iframe src="https://www.youtube.com/embed/Q1bSDnuIPbo" frameborder="10" aria-controls="1" class="iframe1"></iframe>
+            <iframe src="https://www.youtube.com/embed/6akmv1bsz1M" frameborder="10" aria-controls="1" class="iframe2"></iframe>
+            <iframe src="https://www.youtube.com/embed/cFslUSyfZPc" frameborder="10" aria-controls="1" class="iframe3"></iframe>
+            <iframe src="https://www.youtube.com/embed/V4Z8EdiJxgk" frameborder="10" aria-controls="1" class="iframe4"></iframe>
+            <iframe src="https://www.youtube.com/embed/ulCdoCfw-bY" frameborder="10" aria-controls="1" class="iframe5"></iframe>
+            <iframe src="https://www.youtube.com/embed/aeWyp2vXxqA" frameborder="10" aria-controls="1" class="iframe6"></iframe>
+        </div>
+        <p style="position: relative; top: 305px;">Change Speed:</p>
+        <label for="VidSpeed"></label>
+        <input type="range" id="VidSpeed" min="-90" max="-10" style="position: relative; top: 290px; left: 100px;">
+</body>
+    <script>
+        // my favorite thing about Javascript is that is always works :) 
+        var slider3 = document.getElementById("VidSpeed");
+        const root = document.documentElement;                          
+        slider3.addEventListener("input", (event) => {                  
+            root.style.setProperty("--animtime", -event.target.value + "s"); 
+        } ); 
+        </script>
+</html>

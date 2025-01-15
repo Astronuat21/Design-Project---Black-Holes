@@ -1,0 +1,117 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/*frog*/
+}
+body {
+    overflow-x: hidden;
+}
+h1, h4 {
+    text-align: center;
+    position: relative;
+    bottom: 750px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    letter-spacing: 60px;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s;
+}
+h1:hover {
+    /*basic hover effect for fun*/
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+h4:hover {
+    transform: scale(1.1);
+    transform-origin: top;
+}
+h1 {
+    animation-name: spacing1;
+    animation-duration: 2.7s;
+    animation-delay: 0s;
+    /* setting the values of the animation*/
+}
+h4 {
+    letter-spacing: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    animation-name: spacing2;
+    animation-duration: 2s;
+    animation-delay: 0.1ms;
+    /* setting the values of the animation*/
+}
+img {
+    width: 100%;
+    position: relative;
+    bottom: 200px;
+    z-index: 0;
+}
+#h1 {animation-timing-function: ease;}
+#h4 {animation-timing-function: ease;}
+@keyframes spacing1 { /*Animation Changing size and color fading*/
+    from {letter-spacing: 5px; font-size: 1px;}
+    to {letter-spacing: 60px; font-size: 40px;}
+     0% {color: #430200; opacity: 0;} 
+    10% {color: #8D1301;}
+    20% {color: #cc4f08;}
+    40% {color: #e1741e;}
+    50% {color: #f7ab53;}
+    100% {color: white}
+    0% {opacity: 0;}
+    60% {opacity: 100%;}
+}
+@keyframes spacing2 {
+    from {letter-spacing: 1px; font-size: 1px;}
+    to {letter-spacing: 10px; font-size: 20px;}
+     0% {color: #430200; opacity: 0;}
+    10% {color: #8D1301;}
+    20% {color: #cc4f08;}
+    50% {color: #e1741e;}
+    60% {color: #f7ab53;}
+    80% {color: white}
+    60% {opacity: 100%;}
+}
+.titleblock {
+    /* basic template for titles*/
+    font-size: 40px;
+    position: relative;
+    bottom: 400px;
+    font-weight: bold;
+}
+.textblock {
+    /* basic template for text*/
+    font-size: 24px;
+    position: relative;
+    bottom: 360px;
+}
+.ButtonPage1, .ButtonPage2, .ButtonPage3, .ButtonPage4, .ButtonPage5 {
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    bottom: 200px;
+    background-size: cover;
+    background-color: #f7ab53;
+    
+}
+/* the understanding part will be left as an exercise for the reader */
+.ButtonPage1 {animation: BDebris 10s ease-in-out -0s infinite; right:  20px;} 
+.ButtonPage2 {animation: BDebris 10s ease-in-out -5s infinite; right: 100px;}
+.ButtonPage3 {animation: BDebris 10s ease-in-out -8s infinite; right: 188px;}
+.ButtonPage4 {animation: BDebris 10s ease-in-out -14s infinite; right: 265px;}
+.ButtonPage5 {animation: BDebris 10s ease-in-out -21s infinite; right: 353px;}
+@keyframes BDebris {
+    from {transform: rotate(0deg); transition-timing-function: ease-in-out; background-color: #f7ab53;}
+    0% {opacity: 0; left: 0;}
+    7% {opacity: 0; background-color: #e1741e;}
+    10%,70% {opacity: 100%;}
+    80%,85% {opacity: 0; background-color: #8D1301;}
+    100% {opacity: 0; left: 90%;}
+    to {transform: rotate(1080deg); transition-timing-function: ease-in-out; background-color: #430200;}
+}
+

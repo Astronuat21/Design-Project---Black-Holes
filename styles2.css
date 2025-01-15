@@ -1,0 +1,178 @@
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/*frog*/
+}
+body {
+    overflow-x: hidden;
+} /* Comments are not repeated between CSS stylesheets. see styles.css for more general information, and specific files for specific pages.*/
+h1, h4 {
+    text-align: center;
+    position: relative;
+    bottom: 750px;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    letter-spacing: 60px;
+    font-size: 40px;
+    background-color: rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s;
+}
+h1:hover {
+    transform: scale(1.1);
+    transform-origin: bottom;
+}
+h4:hover {
+    transform: scale(1.1);
+    transform-origin: top;
+}
+h1 {
+    animation-name: spacing1;
+    animation-duration: 2.7s;
+    animation-delay: 0s;
+}
+h4 {
+    letter-spacing: 10px;
+    font-size: 20px;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    animation-name: spacing2;
+    animation-duration: 2s;
+    animation-delay: 0.1ms;
+}
+img {
+    width: 30%;
+    position: relative;
+    bottom: 200px;
+    z-index: 0;
+}
+.TitleCardImage {
+    width: 100%;
+    position: relative;
+    bottom: 200px;
+    z-index: 0;
+}
+#h1 {animation-timing-function: ease;}
+#h4 {animation-timing-function: ease;}
+@keyframes spacing1 {
+    from {letter-spacing: 5px; font-size: 1px;}
+    to {letter-spacing: 60px; font-size: 40px;}
+     0% {color: #430200; opacity: 0;} 
+    10% {color: #8D1301;}
+    20% {color: #cc4f08;}
+    40% {color: #e1741e;}
+    50% {color: #f7ab53;}
+    100% {color: white}
+    0% {opacity: 0;}
+    60% {opacity: 100%;}
+}
+@keyframes spacing2 {
+    from {letter-spacing: 1px; font-size: 1px;}
+    to {letter-spacing: 10px; font-size: 20px;}
+     0% {color: #430200; opacity: 0;}
+    10% {color: #8D1301;}
+    20% {color: #cc4f08;}
+    50% {color: #e1741e;}
+    60% {color: #f7ab53;}
+    80% {color: white}
+    60% {opacity: 100%;}
+}
+.titleblock {
+    /* basic template for titles*/
+    font-size: 40px;
+    position: relative;
+    bottom: 400px;
+    font-weight: bold;
+}
+.textblock {
+    /* basic template for text*/
+    font-size: 24px;
+    position: relative;
+    bottom: 360px;
+}
+:root {
+    /* default values for variables */
+    --mass: 1;
+    --spin: 2s;
+}
+#sliderMass {
+    position: relative;
+}
+.MassChanger {
+    /* changes width based on slider values*/
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    right: calc(100% - width - 100px);
+    top: 1250px;
+    z-index: -1;
+    transform: scale(var(--mass),var(--mass));
+}
+.SpinChanger {
+    /* 
+    CSS is unable to change the properties of GIFs, such as their speed. For the purposes of this project, it was necessary to
+    be able to edit the properties. This is why, instead of using traditional GIFs, i recreated one using a spritesheet. Spritesheets
+    are commonly used in game engines for basic looping animations, like walk cycles.
+
+    You start by turning the GIF into a spritesheet, and set the Background size to (# of frames * 100)%. Every step, the background
+    will move to the right by the width of the image. The "Steps(299)" setting makes it so the animation is done in 299 increments, 
+    meaning that the background will snap to the next frame instead of sliding to it. Once done, the animation will replay, producing
+    a complete replica of a GIF, but with 15 more lines of code and 2 head-sized bumps in my wall (ouch).
+    */
+    background: url(ImagesAndGIFs/spinspinblackhole-ezgif.com-gif-to-sprite-converter.png) 0 0 no-repeat;
+    background-size: 30000%;
+    animation: GifAnimChanger steps(299) var(--spin) infinite;  
+    aspect-ratio: 1 / 1;
+    width: 300px;
+    position: absolute; 
+    left: 65%;
+    bottom: -800px;
+    text-wrap-mode: wrap;
+}
+@keyframes GifAnimChanger {
+    0% {background-position: 0%;} 
+    100% {background-position: 100%;}
+}
+.ButtonPage1, .ButtonPage2, .ButtonPage3, .ButtonPage4, .ButtonPage5 {
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold;
+    top: 500px;
+    bottom: 200px;
+    background-size: cover;
+    background-color: #f7ab53;
+    
+}
+.ButtonPage1 {animation: BDebris 10s ease-in-out -0s infinite; right:  20px;}
+.ButtonPage2 {animation: BDebris 10s ease-in-out -5s infinite; right: 100px;}
+.ButtonPage3 {animation: BDebris 10s ease-in-out -8s infinite; right: 188px;}
+.ButtonPage4 {animation: BDebris 10s ease-in-out -14s infinite; right: 265px;}
+.ButtonPage5 {animation: BDebris 10s ease-in-out -21s infinite; right: 353px;}
+@keyframes BDebris {
+    from {transform: rotate(0deg); transition-timing-function: ease-in-out; background-color: #f7ab53;}
+    0% {opacity: 0; left: 0%; bottom: 200px;}
+    7% {opacity: 0; background-color: #e1741e;}
+    10%,70% {opacity: 100%;}
+    80%,85% {opacity: 0; background-color: #8D1301;}
+    100% {opacity: 0; left: 90%;}
+    to {transform: rotate(1080deg); transition-timing-function: ease-in-out; background-color: #430200; bottom: 200px;}
+}
+.FillerImage {
+    position: relative;
+    width: 500px;
+    left: calc(100% - 550px);
+    bottom: 500px;
+}
+#sliderMass {
+    position: absolute;
+    left: 300px;
+    top: -150px;
+}
+#sliderSpin {
+    position: absolute;
+    left: 70%;
+    top: 1160px;
+    z-index: 100;
+}
